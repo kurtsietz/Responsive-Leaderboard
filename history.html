@@ -1,0 +1,250 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+  	<script src="js/vendor/jquery.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FXDD | Pips Battle</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
+    <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300,700,400' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/ranking.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="js/ng-flags.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+  </head>
+  <body>
+  <script src="js/leaderboard.js"></script>
+    <div id="topbar-wrap" style="display:none;">
+    	<nav class="top-bar" data-topbar>
+        	<ul class="title-area">
+            	<li class="name">
+                	<h1><a href="#">FXDD Pips</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+            </ul>
+            
+            <section class="top-bar-section">
+            	<ul class="right">
+                	<li class="has-dropdown"><a href="#">Language</a></li>
+                </ul>
+                
+                <ul class="left">
+                	<li><a href="#">Register</a></li>
+                    <li class="active"><a href="#">Leaderboard</a></li>
+                </ul>
+            </section>
+        </nav> 
+    </div>
+    
+        <h1 class="header">4時間トレードバトル</h1>
+    	<div class="row">
+           <div class="large-6 medium-6 small-6 columns text-center">
+        	<a class="medium radius button" href="#">入金する</a>
+           </div>
+           <div class="large-6 medium-6 small-6 columns text-center">
+            <a class="medium radius button" href="#">口座開設</a>
+           </div>
+        </div>
+        <hr />
+        <div class="row text-center">
+            <p class="search-text">お客様の順位をこちらからニックネームで検索できます。</p>
+        </div>
+                  <form data-abide>
+                  <div class="row text-center"> 
+                  <div class="large-4 medium-3 small-1 columns"><p></p></div>
+<!-- Search Box--><div class="row collapse large-4 medium-6 small-10 columns">
+					
+                        <div class="small-8 columns">
+                              <div class="name-field">
+                                <input type="text" id="searchUsername" name="searchUsername" placeholder="検索">
+                                <small class="status search_status error">User does not exist</small>
+                              </div>
+                       </div>
+                       <div class="small-2 columns">
+                                <a href="#" class="button postfix">Search</a>
+                       </div>
+                       <div class="small-2 columns">
+                                <a href="#" class="button postfix">Clear</a>
+                       </div>
+                     
+                  </div>
+                  <div class="large-4 medium-3 small-1 columns"></div>
+                  </div></form><!-- End Search Box -->
+          
+            <!-- <input type="submit" id="searchClear" name="searchClear" value="" /> -->
+            
+        </div> <!-- end search -->
+        <!-- LEADERBOARD HEADER -->
+        <div class="row table-heading">
+        	<h4>ランキング</h4>
+        </div>
+        <div class="tableHolder" id="stocks">
+        <div id="leader_board" class="template">
+        <div id="header">
+            <div class="headrow row">
+                    <div class="large-1 medium-1 small-2 columns"><p>順位</p></div>
+                    <div class="large-5 medium-5 small-6 columns"><p>ニックネーム</p></div>
+                    <div class="large-2 medium-2 small-3 columns"><p>利益率(％)</p></div>
+                    <div class="large-3 medium-3 columns hide-for-small-only"><p>勝ちトレード数</p></div>
+                    <div class="large-1 medium-1 small-1 columns"><p>国</p></div>
+            </div> 
+        </div>
+        
+        
+        <!-- END LEADERBOARD HEADER -->
+        <script type="text/javascript">
+			var myapp = angular.module('myapp', ['ngFlag'])
+		</script>
+        <div id="leaderboard" ngFlag>
+            <div class="row">
+            	<div class="large-1 medium-1 small-2 columns"><p>1</p></div>
+                <div class="large-5 medium-5 small-6 columns"><p>twentyfourcharacternickn</p></div>
+                <div class="large-2 medium-2 small-3 columns"><p>6.80%</p></div>
+                <div class="large-3 medium-3 columns hide-for-small-only"><p>500</p></div>                
+                <div class="large-1 medium-1 small-1 columns">
+                	<p><span class="f32 show-for-large-up"><span class="flag jp"></span></span>
+                	   <span class="f16 show-for-medium-only"><span class="flag jp"></span></span>
+                       <span class="f16 show-for-small-only"><span class="flag jp"></span></span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="large-1 medium-1 small-2 columns"><p>2</p></div>
+                <div class="large-5 medium-5 small-6 columns"><p>twentyfourcharacternickn</p></div>
+                <div class="large-2 medium-2 small-3 columns"><p>6.80%</p></div>
+                <div class="large-3 medium-3 columns hide-for-small-only"><p>500</p></div>                
+                <div class="large-1 medium-1 small-1 columns">
+                	<p><span class="f32 show-for-large-up"><span class="flag jp"></span></span>
+                	   <span class="f16 show-for-medium-only"><span class="flag jp"></span></span>
+                       <span class="f16 show-for-small-only"><span class="flag jp"></span></span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="large-1 medium-1 small-2 columns"><p>3</p></div>
+                <div class="large-5 medium-5 small-6 columns"><p>twentyfourcharacternickn</p></div>
+                <div class="large-2 medium-2 small-3 columns"><p>6.80%</p></div>
+                <div class="large-3 medium-3 columns hide-for-small-only"><p>500</p></div>                
+                <div class="large-1 medium-1 small-1 columns">
+                	<p><span class="f32 show-for-large-up"><span class="flag jp"></span></span>
+                	   <span class="f16 show-for-medium-only"><span class="flag jp"></span></span>
+                       <span class="f16 show-for-small-only"><span class="flag jp"></span></span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="large-1 medium-1 small-2 columns"><p>4</p></div>
+                <div class="large-5 medium-5 small-6 columns"><p>twentyfourcharacternickn</p></div>
+                <div class="large-2 medium-2 small-3 columns"><p>6.80%</p></div>
+                <div class="large-3 medium-3 columns hide-for-small-only"><p>500</p></div>                
+                <div class="large-1 medium-1 small-1 columns">
+                	<p><span class="f32 show-for-large-up"><span class="flag jp"></span></span>
+                	   <span class="f16 show-for-medium-only"><span class="flag jp"></span></span>
+                       <span class="f16 show-for-small-only"><span class="flag jp"></span></span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="large-1 medium-1 small-2 columns"><p>5</p></div>
+                <div class="large-5 medium-5 small-6 columns"><p>twentyfourcharacternickn</p></div>
+                <div class="large-2 medium-2 small-3 columns"><p>6.80%</p></div>
+                <div class="large-3 medium-3 columns hide-for-small-only"><p>500</p></div>                
+                <div class="large-1 medium-1 small-1 columns">
+                	<p><span class="f32 show-for-large-up"><span class="flag jp"></span></span>
+                	   <span class="f16 show-for-medium-only"><span class="flag jp"></span></span>
+                       <span class="f16 show-for-small-only"><span class="flag jp"></span></span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="large-1 medium-1 small-2 columns"><p>6</p></div>
+                <div class="large-5 medium-5 small-6 columns"><p>twentyfourcharacternickn</p></div>
+                <div class="large-2 medium-2 small-3 columns"><p>6.80%</p></div>
+                <div class="large-3 medium-3 columns hide-for-small-only"><p>500</p></div>                
+                <div class="large-1 medium-1 small-1 columns">
+                	<p><span class="f32 show-for-large-up"><span class="flag jp"></span></span>
+                	   <span class="f16 show-for-medium-only"><span class="flag jp"></span></span>
+                       <span class="f16 show-for-small-only"><span class="flag jp"></span></span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="large-1 medium-1 small-2 columns"><p>7</p></div>
+                <div class="large-5 medium-5 small-6 columns"><p>twentyfourcharacternickn</p></div>
+                <div class="large-2 medium-2 small-3 columns"><p>6.80%</p></div>
+                <div class="large-3 medium-3 columns hide-for-small-only"><p>500</p></div>                
+                <div class="large-1 medium-1 small-1 columns">
+                	<p><span class="f32 show-for-large-up"><span class="flag jp"></span></span>
+                	   <span class="f16 show-for-medium-only"><span class="flag jp"></span></span>
+                       <span class="f16 show-for-small-only"><span class="flag jp"></span></span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="large-1 medium-1 small-2 columns"><p>8</p></div>
+                <div class="large-5 medium-5 small-6 columns"><p>twentyfourcharacternickn</p></div>
+                <div class="large-2 medium-2 small-3 columns"><p>6.80%</p></div>
+                <div class="large-3 medium-3  columns hide-for-small-only"><p>500</p></div>
+                <div class="large-1 medium-1 small-1 columns">
+                	<p><span class="f32 show-for-large-up"><span class="flag jp"></span></span>
+                	   <span class="f16 show-for-medium-only"><span class="flag jp"></span></span>
+                       <span class="f16 show-for-small-only"><span class="flag jp"></span></span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="large-1 medium-1 small-2 columns"><p>9</p></div>
+                <div class="large-5 medium-5 small-6 columns"><p>twentyfourcharacternickn</p></div>
+                <div class="large-2 medium-2 small-3 columns"><p>6.80%</p></div>
+                <div class="large-3 medium-3 columns hide-for-small-only"><p>500</p></div>                
+                <div class="large-1 medium-1 small-1 columns">
+                	<p><span class="f32 show-for-large-up"><span class="flag jp"></span></span>
+                	   <span class="f16 show-for-medium-only"><span class="flag jp"></span></span>
+                       <span class="f16 show-for-small-only"><span class="flag jp"></span></span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="large-1 medium-1 small-2 columns"><p>10</p></div>
+                <div class="large-5 medium-5 small-6 columns"><p>twentyfourcharacternickn</p></div>
+                <div class="large-2 medium-2 small-3 columns"><p>6.80%</p></div>
+                <div class="large-3 medium-3 columns hide-for-small-only"><p>500</p></div>                
+                <div class="large-1 medium-1 small-1 columns">
+                	<p><span class="f32 show-for-large-up"><span class="flag jp"></span></span>
+                	   <span class="f16 show-for-medium-only"><span class="flag jp"></span></span>
+                       <span class="f16 show-for-small-only"><span class="flag jp"></span></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div><!-- end #leader_board--></div><!-- end .tableHolder -->
+    <div class="footer">
+    	<p>※ガイド・ルール※<br />
+FXDDピップスバトルは2014年4月4日・日本時間午後7時～11時（アメリカ東部時間午前6時～10時）に開催されます。<br />
+バトルに参加するためには、FXDDのライブ口座が必要です。<br />4月2日・日本時間午後10時（アメリカ東部時間午前9時）までにバトル参加の登録を完了してください。対象はSwordfishライブ口座です。<br />
+【必要条件】バトルスタート時点の残高が5万円以上あること。<br />
+【成績の算出方法】バトル期間の投資収益率から順位を算出します。<br />
+成績の一番良かった方には優勝賞金1000ドルを差し上げます。賞金は3-5営業日以内にお客様の優勝口座にお振込みいたします。<br />
+バトルの途中経過は速報ページにてご確認いただけます。<br />
+【諸注意】4月4日午後9時半（日本時間）に米国雇用統計の発表があります。指標発表前後は価格が上下しやすい時間帯です。</p>
+    </div>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/foundation/foundation.abide.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
